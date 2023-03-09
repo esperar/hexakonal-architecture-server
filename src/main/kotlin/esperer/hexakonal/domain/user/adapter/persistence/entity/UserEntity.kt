@@ -19,7 +19,7 @@ class UserEntity(
 
     @ElementCollection(fetch = FetchType.LAZY)
     @Enumerated(EnumType.STRING)
-    @CollectionTable(name = "account_authority", joinColumns = [JoinColumn(name = "account_idx")])
+    @CollectionTable(name = "user_authority", joinColumns = [JoinColumn(name = "account_idx")])
     val authority: MutableList<Authority>
 ) {
 
