@@ -1,6 +1,7 @@
 package esperer.hexakonal.global.security
 
 import esperer.hexakonal.domain.user.application.JwtParserPort
+import esperer.hexakonal.global.config.FilterConfig
 import esperer.hexakonal.global.security.handler.CustomAccessDenied
 import esperer.hexakonal.global.security.handler.CustomAuthenticationEntryPoint
 import org.springframework.context.annotation.Bean
@@ -12,7 +13,6 @@ import org.springframework.security.config.http.SessionCreationPolicy
 import org.springframework.security.crypto.factory.PasswordEncoderFactories
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.security.web.SecurityFilterChain
-import javax.servlet.FilterConfig
 
 @Configuration
 @EnableWebSecurity
@@ -44,8 +44,8 @@ class SecurityConfig(
             .accessDeniedHandler(CustomAccessDenied())
             .and()
 
-            //.apply(FilterConfig(jwtParserPort))
-            //.and()
+            .apply(FilterConfig(jwtParserPort))
+            .and()
             .build()
 
     @Bean
