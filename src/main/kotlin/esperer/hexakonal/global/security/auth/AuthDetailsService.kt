@@ -1,4 +1,4 @@
-package esperer.hexakonal.global.security.jwt.auth
+package esperer.hexakonal.global.security.auth
 
 import esperer.hexakonal.domain.user.adapter.persistence.repository.UserRepository
 import org.springframework.data.repository.findByIdOrNull

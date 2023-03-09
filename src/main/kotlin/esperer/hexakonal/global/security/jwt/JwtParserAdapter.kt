@@ -1,7 +1,7 @@
 package esperer.hexakonal.global.security.jwt
 
 import esperer.hexakonal.domain.user.application.JwtParserPort
-import esperer.hexakonal.global.security.jwt.auth.AuthDetailsService
+import esperer.hexakonal.global.security.auth.AuthDetailsService
 import esperer.hexakonal.global.security.jwt.properties.JwtProperties
 import io.jsonwebtoken.Claims
 import io.jsonwebtoken.Jwts
