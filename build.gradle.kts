@@ -32,6 +32,8 @@ dependencies {
 	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
 
 	implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
+	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 }
 
 tasks.withType<KotlinCompile> {
