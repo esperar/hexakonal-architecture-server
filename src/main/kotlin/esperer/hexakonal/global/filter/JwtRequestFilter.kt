@@ -1,6 +1,6 @@
 package esperer.hexakonal.global.filter
 
-import esperer.hexakonal.domain.user.application.JwtParserPort
+import esperer.hexakonal.domain.user.application.port.JwtParserPort
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.web.filter.OncePerRequestFilter
 import javax.servlet.FilterChain

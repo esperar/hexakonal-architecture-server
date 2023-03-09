@@ -1,4 +1,4 @@
-package esperer.hexakonal.domain.user.application
+package esperer.hexakonal.domain.user.application.port
 
 import org.springframework.security.core.Authentication
 import javax.servlet.http.HttpServletRequest
