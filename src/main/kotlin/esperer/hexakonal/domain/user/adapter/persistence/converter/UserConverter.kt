@@ -14,7 +14,7 @@ class UserConverter {
             UserEntity(
                 id = it.id,
                 email = it.email,
-                password = it.password,
+                password = password,
                 name = it.name,
                 authority = Collections.singletonList(Authority.ROLE_USER)
             )
