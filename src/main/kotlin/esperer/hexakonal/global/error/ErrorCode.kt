@@ -5,7 +5,7 @@ enum class ErrorCode(
     val status: Int
 ) {
     DUPLICATE_EMAIL("중복된 이메일 입니다.", 409),
-    ACCOUNT_NOT_FOUND("계정을 찾을 수 없습니다.", 404),
+    USER_NOT_FOUND("계정을 찾을 수 없습니다.", 404),
     PASSWORD_NOT_CORRECT("비밀번호가 일치하지 않습니다.", 400),
 
     INVALID_TOKEN_TPYE("유효하지 않은 토큰 타입 입니다.", 403),
