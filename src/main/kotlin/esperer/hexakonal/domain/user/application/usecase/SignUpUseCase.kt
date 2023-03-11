@@ -2,9 +2,9 @@ package esperer.hexakonal.domain.user.application.usecase
 
 import esperer.hexakonal.domain.user.adapter.presentation.data.request.SignUpRequest
 import esperer.hexakonal.domain.user.adapter.presentation.data.request.toDomain
-import esperer.hexakonal.domain.user.application.port.CommandUserPort
-import esperer.hexakonal.domain.user.application.port.PasswordEncodePort
-import esperer.hexakonal.domain.user.application.port.QueryUserPort
+import esperer.hexakonal.domain.user.application.spi.CommandUserPort
+import esperer.hexakonal.domain.user.application.spi.PasswordEncodePort
+import esperer.hexakonal.domain.user.application.spi.QueryUserPort
 import esperer.hexakonal.domain.user.exception.DuplicateEmailException
 import esperer.hexakonal.global.annotation.usecase.TransactionalUseCase
 import java.util.*

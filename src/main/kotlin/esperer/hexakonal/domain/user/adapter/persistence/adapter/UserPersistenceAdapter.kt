@@ -3,7 +3,7 @@ package esperer.hexakonal.domain.user.adapter.persistence.adapter
 import esperer.hexakonal.domain.user.User
 import esperer.hexakonal.domain.user.adapter.persistence.converter.UserConverter
 import esperer.hexakonal.domain.user.adapter.persistence.repository.UserRepository
-import esperer.hexakonal.domain.user.application.port.UserPort
+import esperer.hexakonal.domain.user.application.spi.UserPort
 import esperer.hexakonal.global.annotation.adapter.TransactionalAdapter
 import org.springframework.data.repository.findByIdOrNull
 import java.util.*

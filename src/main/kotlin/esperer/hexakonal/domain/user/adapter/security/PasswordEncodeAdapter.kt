@@ -1,6 +1,6 @@
 package esperer.hexakonal.domain.user.adapter.security
 
-import esperer.hexakonal.domain.user.application.port.PasswordEncodePort
+import esperer.hexakonal.domain.user.application.spi.PasswordEncodePort
 import esperer.hexakonal.global.annotation.adapter.TransactionalAdapter
 import org.springframework.security.crypto.password.PasswordEncoder
 

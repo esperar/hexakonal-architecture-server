@@ -2,9 +2,9 @@ package esperer.hexakonal.domain.user.application.usecase
 
 import esperer.hexakonal.domain.user.adapter.presentation.data.request.SignInRequest
 import esperer.hexakonal.domain.user.adapter.presentation.data.response.TokenResponse
-import esperer.hexakonal.domain.user.application.port.GenerateJwtPort
-import esperer.hexakonal.domain.user.application.port.PasswordEncodePort
-import esperer.hexakonal.domain.user.application.port.QueryUserPort
+import esperer.hexakonal.domain.user.application.spi.GenerateJwtPort
+import esperer.hexakonal.domain.user.application.spi.PasswordEncodePort
+import esperer.hexakonal.domain.user.application.spi.QueryUserPort
 import esperer.hexakonal.domain.user.exception.PasswordMismatchException
 import esperer.hexakonal.domain.user.exception.UserNotFoundException
 import esperer.hexakonal.global.annotation.usecase.ReadOnlyUseCase

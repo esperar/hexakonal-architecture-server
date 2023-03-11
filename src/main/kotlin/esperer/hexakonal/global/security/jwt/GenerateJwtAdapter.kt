@@ -3,7 +3,7 @@ package esperer.hexakonal.global.security.jwt
 import esperer.hexakonal.domain.refresh.adapter.persistence.entity.RefreshTokenEntity
 import esperer.hexakonal.domain.refresh.adapter.persistence.repository.RefreshTokenRepository
 import esperer.hexakonal.domain.user.adapter.presentation.data.response.TokenResponse
-import esperer.hexakonal.domain.user.application.port.GenerateJwtPort
+import esperer.hexakonal.domain.user.application.spi.GenerateJwtPort
 import esperer.hexakonal.global.security.jwt.properties.JwtProperties
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm

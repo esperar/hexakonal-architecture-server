@@ -1,4 +1,4 @@
-package esperer.hexakonal.domain.user.application.port
+package esperer.hexakonal.domain.user.application.spi
 
 import esperer.hexakonal.domain.user.User
 

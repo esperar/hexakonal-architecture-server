@@ -1,6 +1,6 @@
 package esperer.hexakonal.global.security
 
-import esperer.hexakonal.domain.user.application.port.JwtParserPort
+import esperer.hexakonal.domain.user.application.spi.JwtParserPort
 import esperer.hexakonal.global.config.FilterConfig
 import esperer.hexakonal.global.security.handler.CustomAccessDenied
 import esperer.hexakonal.global.security.handler.CustomAuthenticationEntryPoint
