@@ -2,8 +2,6 @@ package esperer.hexakonal.domain.post.adapter.persistence.converter
 
 import esperer.hexakonal.domain.post.Post
 import esperer.hexakonal.domain.post.adapter.persistence.entity.PostEntity
-import esperer.hexakonal.domain.post.adapter.persistence.repository.PostRepository
-import esperer.hexakonal.domain.post.exception.PostNotFoundException
 import esperer.hexakonal.domain.user.adapter.persistence.repository.UserRepository
 import esperer.hexakonal.domain.user.exception.UserNotFoundException
 import org.springframework.data.repository.findByIdOrNull
