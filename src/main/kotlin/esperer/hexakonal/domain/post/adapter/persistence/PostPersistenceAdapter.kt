@@ -6,6 +6,7 @@ import esperer.hexakonal.domain.post.adapter.persistence.repository.PostReposito
 import esperer.hexakonal.domain.post.application.spi.PostPort
 import esperer.hexakonal.domain.post.exception.PostNotFoundException
 import esperer.hexakonal.global.annotation.adapter.TransactionalAdapter
+import org.springframework.data.domain.PageRequest
 import org.springframework.data.repository.findByIdOrNull
 import java.util.*
 
@@ -21,4 +22,6 @@ class PostPersistenceAdapter(
     override fun queryPostById(postId: UUID): Post? =
         postRepository.findByIdOrNull(postId)?.let { postConverter.toDomain(it) }
 
+    override fun queryAllPost(pageRequest: PageRequest): List<Post> =
+        postRepository.findAll().map { postConverter.toDomain(it)}
 }
