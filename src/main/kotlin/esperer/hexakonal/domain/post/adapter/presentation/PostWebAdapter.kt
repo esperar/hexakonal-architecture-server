@@ -2,6 +2,8 @@ package esperer.hexakonal.domain.post.adapter.presentation
 
 import esperer.hexakonal.domain.post.adapter.presentation.data.request.CreatePostRequest
 import esperer.hexakonal.domain.post.adapter.presentation.data.response.PostDetailResponse
+import esperer.hexakonal.domain.post.adapter.presentation.data.response.PostResponse
+import esperer.hexakonal.domain.post.application.usecase.QueryAllPostUseCase
 import esperer.hexakonal.domain.post.application.usecase.QueryPostUseCase
 import esperer.hexakonal.domain.post.application.usecase.SavePostUseCase
 import org.springframework.http.HttpStatus
@@ -18,7 +20,8 @@ import java.util.*
 @RequestMapping("/post")
 class PostWebAdapter(
     private val savePostUseCase: SavePostUseCase,
-    private val queryPostUseCase: QueryPostUseCase
+    private val queryPostUseCase: QueryPostUseCase,
+    private val queryAllPostUseCase: QueryAllPostUseCase
 ) {
 
     @PostMapping
@@ -29,6 +32,11 @@ class PostWebAdapter(
     @GetMapping("/{post_id}")
     fun getPostDetail(@PathVariable("post_id") postId: UUID): ResponseEntity<PostDetailResponse> =
         queryPostUseCase.execute(postId)
+            .let { ResponseEntity.ok(it) }
+
+    @GetMapping
+    fun getAllPost(): ResponseEntity<List<PostResponse>> =
+        queryAllPostUseCase.execute()
             .let { ResponseEntity.ok(it) }
 
 }
