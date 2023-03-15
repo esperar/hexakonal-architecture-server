@@ -22,6 +22,6 @@ class PostPersistenceAdapter(
     override fun queryPostById(postId: UUID): Post? =
         postRepository.findByIdOrNull(postId)?.let { postConverter.toDomain(it) }
 
-    override fun queryAllPost(pageRequest: PageRequest): List<Post> =
+    override fun queryAllPost(): List<Post> =
         postRepository.findAll().map { postConverter.toDomain(it)}
 }

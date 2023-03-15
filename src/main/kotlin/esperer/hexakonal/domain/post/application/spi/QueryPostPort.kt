@@ -7,5 +7,5 @@ import java.util.UUID
 interface QueryPostPort {
 
     fun queryPostById(postId: UUID): Post?
-    fun queryAllPost(pageRequest: PageRequest): List<Post>
+    fun queryAllPost(): List<Post>
 }
