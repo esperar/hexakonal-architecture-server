@@ -19,6 +19,9 @@ class PostPersistenceAdapter(
     override fun savePost(post: Post): Post =
         postConverter.toDomain(postRepository.save(postConverter.toEntity(post)))
 
+    override fun deletePost(post: Post) =
+        postRepository.delete(postConverter.toEntity(post))
+
     override fun queryPostById(postId: UUID): Post? =
         postRepository.findByIdOrNull(postId)?.let { postConverter.toDomain(it) }
 
