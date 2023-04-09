@@ -4,5 +4,5 @@ import esperer.hexakonal.domain.post.Post
 
 interface CommandPostPort {
     fun savePost(post: Post): Post
-    fun deletePort(post: Post)
+    fun deletePost(post: Post)
 }
