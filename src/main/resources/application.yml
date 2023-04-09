@@ -19,3 +19,6 @@ jwt:
   refreshSecret: ${REFRESH_SECRET}
   accessExp: ${ACCESS_EXP}
   refreshExp: ${REFRESH_EXP}
+
+server:
+  port: 7070
